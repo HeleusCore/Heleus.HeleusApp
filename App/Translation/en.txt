@@ -1,0 +1,298 @@
+﻿App.Name: Heleus
+App.FullName: Heleus
+App.Developer: Heleus Core
+App.Description: The offical app for the Heleus blockchain technology.
+App.Link: https://heleuscore.com/heleus/
+App.Version: 0.9.0 (build 1)
+App.Scheme: heleus
+
+# Overrides
+#
+PushTokenSyncState.QueryServiceNode: Contacting Heleus Node
+PushTokenSyncResult.NoAppropriateServiceNodeFound: No appropriate heleus node found. Please unlock your heleus account first. 
+PushTokenSyncResult.WrongResponse: The response from the heleus node was wrong.
+PushTokenSyncResult.WrongAckResponse: The ack response from the heleus node was wrong.
+PushTokenSyncResult.AlreadySynced: The remote token is already synchronized with the heleus node.
+Messages.PushMissingAccount: .PushTokenSyncResult.NoAppropriateServiceNodeFound
+
+SettingsPage.PNTransfer: Notify on Transfer
+
+# Pages
+#
+AccountPage.Title: Account
+AccountPage.Register: Registration
+AccountPage.RegisterInfo: Thank you for using Heleus. Manage your heleus account, view all your transactions, check your balance, transfer coins, authorize and manage other Heleus Services.
+AccountPage.RegisterButton: Register New Heleus Account
+AccountPage.ImportButton: Import Heleus Account
+AccountPage.RestoreButton: Restore Heleus Account
+AccountPage.Unlock: Unlock Heleus Account
+AccountPage.UnlockPassword: Heleus Account Password
+AccountPage.UnlockButton: Unlock Heleus Account
+AccountPage.UnlockFailed: Unlocking the heleus account failed, the password is incorrect.
+AccountPage.UnlockInfo: The heleus account must be unlocked with the correct account password.
+AccountPage.Account: Your Heleus Account
+AccountPage.Transfer: Transfer Coins
+AccountPage.Join: Authorize Service
+AccountPage.OpenLink: .OpenLinkPage.Title
+AccountPage.Purchase: Buy Purchase
+AccountPage.Key: Heleus Account
+AccountPage.ExportButton: Export Heleus Account
+
+RegisterPage.Title: Register
+RegisterPage.NewAccount: Heleus Account
+RegisterPage.Name: Account Name (optional)
+RegisterPage.Password1: .Common.AccountPassword
+RegisterPage.Password2: Repeat Account Password 
+RegisterPage.Register: Register New Heleus Account
+RegisterPage.SignatureKeyInfo: Signature Key
+RegisterPage.Agree: I agree to the {0}
+RegisterPage.Success:  Thank you for using Heleus. Please export your Heleus account and store it in a save location.
+RegisterPage.NameStatus: - Set a usefull name for the account
+RegisterPage.PasswordStatus: - Set a password with at least {0} characters. Write it down and store it in a safe place. YOU WILL NOT BE ABLE TO RESTORE THE PASSWORD AND LOSE EVERYTHING.
+RegisterPage.AgreeStatus: - You agree to the {0}
+
+RestorePage.Title: Restore
+RestorePage.Account: Heleus Account
+RestorePage.AccountId: Account Id
+RestorePage.AccountStatus: - Type a valid heleus account id
+RestorePage.Restore: Restore Heleus Account
+RestorePage.Success: The heleus account was restored successfully.
+
+TransactionsPage.Title: Transactions
+TransactionsPage.RecentTransactions: Recent Transactions
+TransactionsPage.RefreshButton: Refresh
+TransactionsPage.MoreButton: Load More Transactions
+TransactionsPage.NoTransactions: No transactions available
+
+
+TransferPage.Title: Transfer
+TransferPage.TransferDetail: Transfer Details
+TransferPage.Receiver: Receiver Account ID
+TransferPage.ReceiverButton: View Receiver Profile
+TransferPage.Amount: Amount
+TransferPage.Reason: Reason
+TransferPage.ReceiverStatus: - Set a valid receiver account ID
+TransferPage.AmountStatus: - Set a valid amount Heleus Coins
+TransferPage.Password: .AccountPage.UnlockPassword
+TransferPage.PasswordStatus: .Common.AccountPasswordStatus
+TransferPage.Submit: .Common.Submit
+TransferPage.Success: The transfer was successfull.
+
+
+ChainInfoBasePage.Chain: Service Info
+ChainInfoBasePage.ChainId: .Common.ServiceId
+ChainInfoBasePage.ChainLink: Service Website
+ChainInfoBasePage.ChainIdStatus: - Enter a valid service id
+ChainInfoBasePage.Password: .AccountPage.UnlockPassword
+ChainInfoBasePage.PasswordStatus: .TransferPage.PasswordStatus
+ChainInfoBasePage.AccountProfile: View Owner Account Profile
+ChainInfoBasePage.ServiceInfo: You must authorize a Heleus service with your heleus account before you can use it. Check all the info below and press 'Authorize Service'.
+
+JoinChainPage.Title: Authorize Service
+JoinChainPage.AuthorizeConfirm: Do you want to authorize the heleus service?
+JoinChainPage.PublicKey: Signature Key
+JoinChainPage.PrivatePublicKey: Derived Signature Key
+JoinChainPage.DerivedKeyInfo: Derived Signature Key
+JoinChainPage.Service: Service Info
+JoinChainPage.DerivedInfo: A derived signature key is a unique signature key that is derived from your heleus account using scrypt. Paste the derived signature key in the requesting service app to authorize it.
+JoinChainPage.SuccessDerived: You authorized the Heleus service. The derived signature key was copied to the clipboard. Please switch back to the service app and paste it there.
+JoinChainPage.Success: You authorized the Heleus service. You can start using it now.
+JoinChainPage.Submit: Authorize Service
+
+BuyPurchasePage.Title: Buy Purchase
+BuyPurchasePage.PurchaseInfo: Purchase Info
+BuyPurchasePage.SelectPurchase: Select Purchase
+BuyPurchasePage.PurchaseId: .PurchasePage.PurchaseId
+BuyPurchasePage.PurchaseStatus: - Select a valid purchase
+BuyPurchasePage.Success: Purchase successfully bought.
+BuyPurchasePage.Submit: Buy Purchase 
+
+PurchaseListPage.Title: Purchases
+PurchaseListPage.Purchases: Availabe Purchases
+PurchaseListPage.NoPurchases: No purchases available
+
+ProfilePage.Title: Profile
+ProfilePage.Profile: Profile
+ProfilePage.Profiles: More
+ProfilePage.ViewProfile: View Other Profiles
+ProfilePage.Edit: Edit Your Profile
+ProfilePage.Join: Authorize Profile Service
+ProfilePage.JoinInfo: You can add a public profile to your Heleus account with our optional Profile Service. Your profile can be viewed by other people and used by other applications.
+
+EditProfilePage.Title: Edit Profile
+EditProfilePage.Invoke: Invoke
+EditProfilePage.Success: The changes to your profile were saved.
+EditProfilePage.ImageSection: Profile Photo
+EditProfilePage.SelectImage: Choose Photo
+EditProfilePage.EditSection: Profile Info
+EditProfilePage.RealName: Real Name
+EditProfilePage.ProfileName: Profile Name
+EditProfilePage.Bio: Profile Tagline
+EditProfilePage.RealNameStatus: - Set a real name
+EditProfilePage.ProfileNameStatus: - Set a profile name (alphanumeric only)
+EditProfilePage.BioStatus: - Set a tagline
+EditProfilePage.AddItemButton: Add Profile Item
+EditProfilePage.TimeoutSection: Connection Failed
+EditProfilePage.NoChanges: You didn't make any changes to your profile.
+EditProfilePage.TimeoutText: Counldn't download your current profile data. Please try again later.
+
+ProfileItemPage.Title: Profile Item
+ProfileItemPage.Key: Display Name
+ProfileItemPage.WebsiteValue: Website Url
+ProfileItemPage.MailValue: Email
+ProfileItemPage.KeyStatus: - Set a display name
+ProfileItemPage.WebsiteStatus: - Set a valid website url
+ProfileItemPage.MailStatus: - Set a valid email adress
+
+ChainOverviewPage.Title: Chain Keys
+ChainOverviewPage.EditChain: Edit Chain
+ChainOverviewPage.ExportKey: Export Chain Key
+ChainOverviewPage.ChainInfoDownloadFailed: Could not download chain data. Please try again later.
+ChainOverviewPage.ChainKeys: Available Chain Keys
+ChainOverviewPage.ImportKey: Import Chain Key
+ChainOverviewPage.ChainInfo: If you want to run your own Heleus service, you have to register your own chain.
+ChainOverviewPage.NewChain: New Chain 
+ChainOverviewPage.NewChainButton: Register New Chain
+
+ChainPage.Title: Chain
+ChainPage.Info: Service Info
+ChainPage.Name: Service Name
+ChainPage.NameStatus: - Set a valid service name
+ChainPage.Website: Service Website
+ChainPage.WebsiteStatus: - Set a valid website or nothing
+ChainPage.ChainKeys: Chain Keys
+ChainPage.ChainKeysButton: Add Chain Key
+ChainPage.AdminKeyStatus: - Add a valid chain key with admin permission
+ChainPage.EndPoints: Public Endpoints
+ChainPage.EndPointsButton: Add Public Endpoint
+ChainPage.EndPointStatus: - Add a valid public endpoint
+ChainPage.Purchases: Purchases
+ChainPage.PurchasesButton: Add Purchase
+ChainPage.KeyPassword: Chain Key Password
+ChainPage.PasswordStatus: - Enter the chain key password
+ChainPage.Submit: Submit
+ChainPage.Success: Chain successfully submitted.
+ChainPage.NoChanges: No changes detected.
+
+ChainKeyPage.Title: Chain Key
+ChainKeyPage.Key: Sign Key
+ChainKeyPage.Name: Name
+ChainKeyPage.KeyButton: Generate New Random Sign Key
+ChainKeyPage.KeyIndex: Chain Key Key Index
+ChainKeyPage.KeyOptions: Options
+ChainKeyPage.Admin: Adminstration Key
+ChainKeyPage.ServiceKey: Service Chain Key
+ChainKeyPage.ServiceVote: Service Chain Vote Key
+ChainKeyPage.DataKey: Data Chain Key
+ChainKeyPage.DataVote Data Chain Vote Key
+ChainKeyPage.ChainIndex: Chain Index
+ChainKeyPage.Password: Password
+ChainKeyPage.Password2: Repeat Password
+ChainKeyPage.KeyStatus: - Set a valid sign key or generate one
+ChainKeyPage.KeyIndexStatus: - Set an unique chain key index between {0} and {1}
+ChainKeyPage.NameStatus: - Set a chain key name
+ChainKeyPage.PasswordStatus: .Common.NewPasswordStatus
+ChainKeyPage.Submit: .Common.Add
+
+EndpointPage.Title: Endpoint
+EndpointPage.EndPoint: Public EndPoint
+EndpointPage.EndPointInfo: Set a valid public endpoint url that points to a Heleus node.
+EndpointPage.Submit: .Common.Add
+
+PurchasePage.Title: Purchase
+PurchasePage.Type: Purchase Type
+PurchasePage.Ids: Purchase IDs
+PurchasePage.PurchaseId: Purchase ID
+PurchasePage.GroupId: Group ID
+PurchasePage.IdsInfo: The purchase and group ID are unique IDs. Every feature needs a separate group ID, while subscriptions can be bundled via the same group ID.
+PurchasePage.Info: Purchase Info 
+PurchasePage.Description: Description 
+PurchasePage.Price: Price
+PurchasePage.PriceInfo: {0} Heleus Coins
+PurchasePage.Duration: Duration in Hours
+PurchasePage.PurchaseIdStatus: - Set a unique purchase ID
+PurchasePage.GroupIdStatus: - Set a valid group ID, do not mix IDs for features and subscriptions 
+PurchasePage.DescriptionStatus: - Set a description
+PurchasePage.PriceStatus: - Set a valid price
+PurchasePage.DurationStatus: - Set a valid duration for a subscription purchase
+PurchasePage.Submit: Add 
+
+# Views
+#
+
+CoreOperationView.Type: Transaction Type
+CoreOperationView.Id: Transaction ID
+CoreOperationView.Date: Transaction Date
+CoreOperationView.BlockId: Block ID
+CoreOperationView.AccountId: Account ID
+CoreOperationView.PublicKey: Public Sign Key
+CoreOperationView.NewBalance: New Balance
+CoreOperationView.NewGiftedBalance: New Gifted Balance
+CoreOperationView.ChainId: .Common.ServiceId
+CoreOperationView.Sent: Sent Heleus Coins
+CoreOperationView.SentInfo: {0} to {1} ({2})
+CoreOperationView.Joined: Authorized
+CoreOperationView.JoinInfo: Service {0} with sign key index {1}
+CoreOperationView.Received: Received Heleus Coins
+CoreOperationView.ReceivedInfo: {0} from {1} ({2})
+CoreOperationView.Purchased: Purchase Item
+CoreOperationView.PurchasedInfo: {0} from Service {1} for {2}
+
+ChainItemView.EndPoint: Public Endpoint
+ChainItemView.Key: Public Sign Key
+ChainItemView.KeyIndex: Sign Key Index
+ChainItemView.Admin: Admin Key
+ChainItemView.AccountId: Account ID
+ChainItemView.PurchaseType: Purchase Type
+ChainItemView.PurchaseId: Purchase ID
+ChainItemView.GroupId: Group ID
+ChainItemView.Description: Description
+ChainItemView.Price: Price
+ChainItemView.Duration: Duration in days
+ChainItemView.ChainIndex: Chain Index
+ChainItemView.ServiceKey: Service Key
+ChainItemView.ServiceVoteKey: Service Vote Key
+ChainItemView.DataKey: Data Key
+ChainItemView.DataVoteKey: Data Vote Key
+
+BalanceView.Balance: Heleus Coins
+
+ChainInfoView.Name: Service Name
+ChainInfoView.Website: Service Website
+ChainInfoView.Account: Owner Account ID
+ChainInfoView.Id: Common.ServiceId
+
+# Transactions
+# 
+CoreOperation.Account: New Account
+CoreOperation.AccountUpdate: Account Update
+CoreOperation.ChainInfo: Chain Registration/Update
+
+
+# enums
+#
+ChainItemStatus.New: New
+ChainItemStatus.Revoked: Revoked
+ChainItemStatus.Live: Live
+ChainItemStatus.Delete: Delete
+
+PurchaseTypes.Feature: Feature
+PurchaseTypes.Subscription: Subscription
+PurchaseTypes.Consumeable: Consumeable
+
+ProfileUserCodes: Profile Service error: {0} (Code {1}).
+ProfileUserCodes.InvalidTransaction: Transaction invalid
+ProfileUserCodes.InvalidAttachements: Attachements invalid
+ProfileUserCodes.InvalidImage: Invalid image
+ProfileUserCodes.InvalidImageFileSize: Image size too big
+ProfileUserCodes.InvalidImageDimensions: Image dimensions wrong
+ProfileUserCodes.InvalidProfileJsonFizeSize: Profile data too big
+ProfileUserCodes.InvalidProfileJson: Profile data invalid
+ProfileUserCodes.InvalidRealName: Real name invalid
+ProfileUserCodes.InvalidProfileName: Profile name invalid
+ProfileUserCodes.ProfileNameInUse: Profile name in use
+
+# Links
+#
+Link.ReportIssue: https://github.com/HeleusCore/Heleus/issues
+Link.RequestFeature: https://github.com/HeleusCore/Heleus/issues

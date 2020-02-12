@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{98E1B380-87B9-4F3E-9579-0ECE0ED21E32}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Heleus.Apps.HeleusApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Page\TestPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIApp\UIApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIApp\UIAppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIApp\Theme.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\AboutPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\SettingsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\TransactionsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WalletApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CoreOperationView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Chain\ChainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Chain\EndpointPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Chain\ChainKeyPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Chain\PurchasePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChainViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HeleusClientResponseExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BalanceView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChainInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PurchaseInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WalletClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WalletApp.Profile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\PurchaseEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ChainRegistrationEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountBalanceEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountRegisterEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountTransferEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\JoinChainEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ProfileUploadEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Profile\EditProfilePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Chain\ChainOverviewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Profile\ProfilePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Profile\ProfileItemPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\AccountPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\BuyPurchasePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\ChainInfoBasePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\JoinChainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\SignTextPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\TransferPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\PurchaseListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\RegisterPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIApp\SchemeActions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StatusValidators.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountUnlockedEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\RestorePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\AuthorizeDerivedKeyPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Translation\en.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)..\..\Heleus.AppBase\AppTemplate\App\Translation\en.common.txt">
+      <Link>Translation\en.common.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Events\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Page\Profile\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Page\Account\" />
+  </ItemGroup>
+</Project>

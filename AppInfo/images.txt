@@ -1,0 +1,24 @@
+coins.png => Platforms/iOS/Resources/icons/coins.png ; blend 25x25 25x25;
+coins.png => Platforms/iOS/Resources/icons/coins@2x.png ; blend 50x50 50x50;
+coins.png => Platforms/iOS/Resources/icons/coins@3x.png ; blend 75x75 75x75;
+
+link.png => Platforms/iOS/Resources/icons/link.png ; blend 25x25 25x25;
+link.png => Platforms/iOS/Resources/icons/link@2x.png ; blend 50x50 50x50;
+link.png => Platforms/iOS/Resources/icons/link@3x.png ; blend 75x75 75x75;
+
+sliders.png => Platforms/iOS/Resources/icons/sliders.png ; blend 25x25 25x25;
+sliders.png => Platforms/iOS/Resources/icons/sliders@2x.png ; blend 50x50 50x50;
+sliders.png => Platforms/iOS/Resources/icons/sliders@3x.png ; blend 75x75 75x75;
+
+usercircle.png => Platforms/iOS/Resources/icons/usercircle.png ; blend 25x25 25x25;
+usercircle.png => Platforms/iOS/Resources/icons/usercircle@2x.png ; blend 50x50 50x50;
+usercircle.png => Platforms/iOS/Resources/icons/usercircle@3x.png ; blend 75x75 75x75;
+
+history.png => Platforms/iOS/Resources/icons/history.png ; blend 25x25 25x25;
+history.png => Platforms/iOS/Resources/icons/history@2x.png ; blend 50x50 50x50;
+history.png => Platforms/iOS/Resources/icons/history@3x.png ; blend 75x75 75x75;
+
+shield-check.png => Platforms/iOS/Resources/icons/shield-check.png ; blend 25x25 25x25;
+shield-check.png => Platforms/iOS/Resources/icons/shield-check@2x.png ; blend 50x50 50x50;
+shield-check.png => Platforms/iOS/Resources/icons/shield-check@3x.png ; blend 75x75 75x75;
+

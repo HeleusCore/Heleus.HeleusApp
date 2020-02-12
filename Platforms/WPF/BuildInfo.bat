@@ -1,0 +1,3 @@
+SET _SHORTNAME=Heleus
+SET _EXEC=heleus
+SET _VERSION="0.9.0"

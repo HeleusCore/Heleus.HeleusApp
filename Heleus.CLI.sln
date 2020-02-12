@@ -1,0 +1,73 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Heleus.App", "App\Heleus.App.shproj", "{98E1B380-87B9-4F3E-9579-0ECE0ED21E32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9DC79C97-ECFB-4264-A822-435EF2D7A0B7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "..\Heleus.AppBase\Base\Shared\Shared.shproj", "{87DA3F85-DE94-4F50-93C8-DD1586606C13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Heleus", "Heleus", "{C300CAF8-3C84-4E6C-8A0F-9376791E0A59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heleus.Base", "..\Heleus.Base\Heleus.Base.csproj", "{214C950E-1777-41A3-892B-CAB0DBA8FF89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heleus.ProfileServiceBase", "..\Heleus.Services\ProfileServiceBase\Heleus.ProfileServiceBase.csproj", "{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heleus.VerifyServiceBase", "..\Heleus.Services\VerifyServiceBase\Heleus.VerifyServiceBase.csproj", "{C494EE70-DBC9-4743-933B-1ABF5040B0DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heleus.CLI", "cli\Heleus.CLI.csproj", "{054EA46C-BC96-49BD-B327-75C59BD94A96}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared.HeleusProfile", "..\Heleus.AppBase\Base\Shared.HeleusProfile\Shared.HeleusProfile.shproj", "{EE84A9EF-DC82-4495-9CF6-581F43D1082A}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Heleus.AppBase\Base\Shared\Shared.projitems*{87da3f85-de94-4f50-93c8-dd1586606c13}*SharedItemsImports = 13
+		App\Heleus.App.projitems*{98e1b380-87b9-4f3e-9579-0ece0ed21e32}*SharedItemsImports = 13
+		..\Heleus.AppBase\Base\Shared.CLI\Shared.CLI.projitems*{ee84a9ef-dc82-4495-9cf6-581f43d1082a}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214C950E-1777-41A3-892B-CAB0DBA8FF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214C950E-1777-41A3-892B-CAB0DBA8FF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214C950E-1777-41A3-892B-CAB0DBA8FF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214C950E-1777-41A3-892B-CAB0DBA8FF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C494EE70-DBC9-4743-933B-1ABF5040B0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C494EE70-DBC9-4743-933B-1ABF5040B0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C494EE70-DBC9-4743-933B-1ABF5040B0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C494EE70-DBC9-4743-933B-1ABF5040B0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054EA46C-BC96-49BD-B327-75C59BD94A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054EA46C-BC96-49BD-B327-75C59BD94A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054EA46C-BC96-49BD-B327-75C59BD94A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054EA46C-BC96-49BD-B327-75C59BD94A96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87DA3F85-DE94-4F50-93C8-DD1586606C13} = {9DC79C97-ECFB-4264-A822-435EF2D7A0B7}
+		{214C950E-1777-41A3-892B-CAB0DBA8FF89} = {C300CAF8-3C84-4E6C-8A0F-9376791E0A59}
+		{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29} = {C300CAF8-3C84-4E6C-8A0F-9376791E0A59}
+		{C494EE70-DBC9-4743-933B-1ABF5040B0DF} = {C300CAF8-3C84-4E6C-8A0F-9376791E0A59}
+		{EE84A9EF-DC82-4495-9CF6-581F43D1082A} = {9DC79C97-ECFB-4264-A822-435EF2D7A0B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F075BD3-6B48-4E8F-B7C4-5EE1BDE392B8}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 80
+		$1.scope = text/x-csharp
+		$1.TabsToSpaces = True
+		$0.CSharpFormattingPolicy = $2
+		$2.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

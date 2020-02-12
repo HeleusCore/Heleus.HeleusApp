@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Heleus.Apps.Shared</RootNamespace>
+    <AssemblyName>heleus</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;CLI;DEBUG;NETCOREAPP;NETCOREAPP2_2</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE;CLI;RELEASE;NETCOREAPP;NETCOREAPP2_2</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Heleus.Base\Heleus.Base.csproj" />
+    <ProjectReference Include="..\..\Heleus.Services\ProfileServiceBase\Heleus.ProfileServiceBase.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\debugendpoint.txt">
+      <Link>debugendpoint.txt</Link>
+      <LogicalName>debugendpoint.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\" />
+  </ItemGroup>
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.Invariant" Value="true" />
+  </ItemGroup>
+  <Import Project="..\App\Heleus.App.projitems" Label="Shared" Condition="Exists('..\App\Heleus.App.projitems')" />
+  <Import Project="..\..\Heleus.AppBase\Base\Shared.CLI\Shared.CLI.projitems" Label="Shared" Condition="Exists('..\..\Heleus.AppBase\Base\Shared.CLI\Shared.CLI.projitems')" />
+  <Import Project="..\..\Heleus.AppBase\Base\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\..\Heleus.AppBase\Base\Shared\Shared.projitems')" />
+</Project>

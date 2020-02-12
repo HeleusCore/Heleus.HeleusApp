@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "428975850113",
+    "firebase_url": "https://com-heleuscore-heleus.firebaseio.com",
+    "project_id": "com-heleuscore-heleus",
+    "storage_bucket": "com-heleuscore-heleus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428975850113:android:471283a813f816afddc380",
+        "android_client_info": {
+          "package_name": "com.heleuscore.heleus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428975850113-f9qttlo1dn4vaptpcsf8quuumv171k79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXvxaDVQ_dyiatMoDUNeLOluEJbSZOLVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428975850113-f9qttlo1dn4vaptpcsf8quuumv171k79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

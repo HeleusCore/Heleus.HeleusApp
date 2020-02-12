@@ -1,0 +1,12 @@
+{
+  "fullname": "Heleus",
+  "name": "Heleus",
+  "description": "Manage your Heleus Core Account.",
+  "developer": "Heleus Core",
+  "domain": "heleuscore.com",
+  "link": "https://heleuscore.com/heleus/",
+  "package": "com.heleuscore.heleus",
+  
+  "primarycolor":"0,75,110",
+  "secondarycolor":"0,30,60"
+}
