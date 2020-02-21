@@ -54,6 +54,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Events\CoreAccountEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Page\Account\RestorePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Page\Account\AuthorizeDerivedKeyPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page\Account\RequestRevenuePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Translation\en.txt" />

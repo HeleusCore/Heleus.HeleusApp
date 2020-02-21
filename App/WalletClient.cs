@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Heleus.Base;
 using Heleus.Chain;
 using Heleus.Chain.Core;
+using Heleus.Chain.Maintain;
 using Heleus.Chain.Purchases;
 using Heleus.Cryptography;
 using Heleus.Messages;
@@ -15,7 +16,7 @@ namespace Heleus.Apps.HeleusApp
 {
     public class WalletClient : HeleusClient
     {
-        public readonly Key LiveNetworkKey = Key.Restore("227046811eb831ee2303b534687b5273b331754cce3d016ad7e6538d21d1f87af7a2f2");
+        public readonly Key LiveNetworkKey = Key.Restore("22a08ab1db146e6be04d6b123a4f42f37778323c378509531ef1dfc399d2ce40b6bd0c");
 
         public CoreAccountKeyStore CurrentCoreAccount { get; private set; }
         public ChainKeyStore CurrentChainAccount { get; private set; }
@@ -403,6 +404,20 @@ namespace Heleus.Apps.HeleusApp
             }
 
             return new HeleusClientResponse(HeleusClientResultTypes.InternalError);
+        }
+
+        public async Task<HeleusClientResponse> RequestRevenue(int chainId, AccountRevenueInfo accountRevenue)
+        {
+            if (CurrentCoreAccount == null)
+            {
+                Log.Warn($"Request revenue failed, no core account set.", this);
+                throw new Exception("CurrentCoreAccount is null");
+            }
+
+            var amount = (int)(accountRevenue.TotalRevenue - accountRevenue.Payout);
+            var requestRevenue = new RequestRevenueServiceTransaction(amount, accountRevenue.Payout, CurrentCoreAccount.AccountId, chainId);
+
+            return await SendServiceTransactionWithCoreAccount(requestRevenue, true);
         }
 
         public async Task<HeleusClientResponse> JoinChain(int chainId, PublicServiceAccountKey publicKey, Key chainKey = null, string serviceKeyName = null, string password = null)

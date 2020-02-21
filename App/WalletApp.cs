@@ -7,6 +7,7 @@ using Heleus.Apps.Shared;
 using Heleus.Base;
 using Heleus.Chain;
 using Heleus.Chain.Core;
+using Heleus.Chain.Maintain;
 using Heleus.Chain.Purchases;
 using Heleus.Cryptography;
 using Heleus.Network.Client;
@@ -16,6 +17,17 @@ using Heleus.Transactions;
 
 namespace Heleus.Apps.HeleusApp
 {
+    public class RequestRevenueEvent
+    {
+        public readonly HeleusClientResponse Response;
+        public readonly AccountRevenueInfo RevenueInfo;
+        public RequestRevenueEvent(HeleusClientResponse response, AccountRevenueInfo revenueInfo)
+        {
+            Response = response;
+            RevenueInfo = revenueInfo;
+        }
+    }
+
     public static partial class WalletApp
     {
         static readonly string _debugEndPoint;
@@ -83,7 +95,7 @@ namespace Heleus.Apps.HeleusApp
         }
 
 #if DEBUG
-		public const int MinPasswordLength = 1;
+        public const int MinPasswordLength = 1;
 #else
         public const int MinPasswordLength = 12;
 #endif
@@ -489,7 +501,7 @@ namespace Heleus.Apps.HeleusApp
                 evt.AddResult(result, _transactionDownload, null);
                 await UIApp.PubSub.PublishAsync(evt);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log.HandleException(ex);
             }
@@ -693,6 +705,42 @@ namespace Heleus.Apps.HeleusApp
 
             end:
             await UIApp.PubSub.PublishAsync(new CoreAccountTransferEvent(result));
+
+            if (result.ResultType != HeleusClientResultTypes.Busy)
+                _busy = false;
+
+            return result;
+        }
+
+        public static async Task<HeleusClientResponse> RequestRevenue(int chainId, AccountRevenueInfo accountRevenue)
+        {
+            HeleusClientResponse result = null;
+            if (!HasCoreAccount)
+            {
+                result = new HeleusClientResponse(HeleusClientResultTypes.NoCoreAccount);
+                goto end;
+            }
+
+            if (_busy)
+            {
+                result = new HeleusClientResponse(HeleusClientResultTypes.Busy);
+                goto end;
+            }
+            _busy = true;
+
+            if (!await Client.SetTargetChain(chainId))
+            {
+                result = new HeleusClientResponse(HeleusClientResultTypes.EndpointConnectionError);
+                goto end;
+            }
+
+            result = await Client.RequestRevenue(chainId, accountRevenue);
+            if (result.TransactionResult == TransactionResultTypes.Ok)
+                UIApp.Run(() => UpdateCoreAccountBalance());
+
+            end:
+
+            await UIApp.PubSub.PublishAsync(new RequestRevenueEvent(result, accountRevenue));
 
             if (result.ResultType != HeleusClientResultTypes.Busy)
                 _busy = false;

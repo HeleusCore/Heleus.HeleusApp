@@ -5,6 +5,7 @@ using Heleus.Base;
 using Heleus.Transactions;
 using Heleus.Network.Client;
 using Heleus.Chain;
+using Heleus.Chain.Core;
 
 namespace Heleus.Apps.HeleusApp.Page.Account
 {
@@ -14,7 +15,7 @@ namespace Heleus.Apps.HeleusApp.Page.Account
         EditorRow _export;
         KeyView _keyView;
 
-        protected override void QueryDone(int chainId)
+        protected override void QueryDone(int chainId, ChainInfo chainInfo)
         {
             _export.Edit.Text = null;
             _keyView.Update(null);

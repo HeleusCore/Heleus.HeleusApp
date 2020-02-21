@@ -18,7 +18,7 @@ namespace Heleus.Apps.Shared
             if (IsGTK)
                 return;
 
-#if ASSHOLE
+#if DEBUG
             var background = new Label
             {
                 BackgroundColor = Color.Red,
@@ -82,6 +82,7 @@ namespace Heleus.Apps.Shared
             };
 
             SchemeAction.RegisterSchemeAction<TransferCoinsSchemeAction>();
+            SchemeAction.RegisterSchemeAction<RequestRevenueSchemeAction>();
             SchemeAction.RegisterSchemeAction<AuthorizeServiceSchemeAction>();
             SchemeAction.RegisterSchemeAction<AuthorizeServiceDerivedSchemeAction>();
             SchemeAction.RegisterSchemeAction<ViewTransactionsSchemeAction>();
@@ -106,9 +107,7 @@ namespace Heleus.Apps.Shared
 
                 menu.AddPage(typeof(Apps.HeleusApp.Page.Account.AccountPage), "AccountPage.Title", Icons.Coins);
                 menu.AddPage(typeof(Apps.HeleusApp.Page.Profile.ProfilePage), "ProfilePage.Title", Icons.UserCircle);
-                //menu.AddPage(typeof(Apps.HeleusApp.Page.Verify.VerifyPage), "VerifyPage.Title", Icons.ShieldCheck);
                 menu.AddPage(typeof(TransactionsPage), "TransactionsPage.Title", Icons.History);
-                //menu.AddPage(typeof(Apps.HeleusApp.Page.Chain.ChainOverviewPage), "ChainOverviewPage.Title", Icons.Link);
                 menu.AddPage(typeof(SettingsPage), "SettingsPage.Title", Icons.Slider);
 
                 masterDetail.Master = menu;
@@ -122,8 +121,6 @@ namespace Heleus.Apps.Shared
 
                 tabbed.AddPage(typeof(Apps.HeleusApp.Page.Account.AccountPage), "AccountPage.Title", "icons/coins.png");
                 tabbed.AddPage(typeof(Apps.HeleusApp.Page.Profile.ProfilePage), "ProfilePage.Title", "icons/usercircle.png");
-                //tabbed.AddPage(typeof(Apps.HeleusApp.Page.Verify.VerifyPage), "VerifyPage.Title", "icons/shield-check.png");
-                //tabbed.AddPage(typeof(Wallet.Page.Chain.ChainOverviewPage), "ChainOverviewPage.Title", "icons/link.png");
                 tabbed.AddPage(typeof(TransactionsPage), "TransactionsPage.Title", "icons/history.png");
                 tabbed.AddPage(typeof(SettingsPage), "SettingsPage.Title", "icons/sliders.png");
 

@@ -40,11 +40,14 @@ namespace Heleus.Apps.HeleusApp.Page.Account
                 await Task.Delay(100);
 
             _chainInfo = (await WalletApp.Client.DownloadChainInfo(_queryChainId)).Data;
+
+            await QueryDoneAsync(chainId, _chainInfo);
+            QueryDone(chainId, _chainInfo);
+
             Loading = false;
 
             _querying = false;
             Status.ReValidate();
-            QueryDone(chainId);
         }
 
         async Task Account(ButtonRow button)
@@ -72,7 +75,12 @@ namespace Heleus.Apps.HeleusApp.Page.Account
 
         }
 
-        virtual protected void QueryDone(int chainId)
+        virtual protected Task QueryDoneAsync(int chainId, ChainInfo chainInfo)
+        {
+            return Task.CompletedTask;
+        }
+
+        virtual protected void QueryDone(int chainId, ChainInfo chainInfo)
         {
 
         }
@@ -130,7 +138,10 @@ namespace Heleus.Apps.HeleusApp.Page.Account
                 }
                 else
                 {
+                    _queryChainId = -1;
                     _chainInfo = null;
+                    QueryDone(-1, null);
+                    UIApp.Run(() => QueryDoneAsync(-1, null));
                 }
 
                 _chainView.Update(_chainInfo);

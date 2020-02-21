@@ -5,6 +5,7 @@ using Heleus.Apps.HeleusApp.Views;
 using Heleus.Cryptography;
 using Heleus.Base;
 using Heleus.Chain;
+using System;
 
 namespace Heleus.Apps.HeleusApp.Page.Account
 {
@@ -46,6 +47,11 @@ namespace Heleus.Apps.HeleusApp.Page.Account
         async Task Transfer(ButtonRow button)
         {
             await Navigation.PushAsync(new TransferPage());
+        }
+
+        async Task RequestRevenue(ButtonRow arg)
+        {
+            await Navigation.PushAsync(new RequestRevenuePage());
         }
 
         async Task HandleRequest(ButtonRow button)
@@ -193,12 +199,21 @@ namespace Heleus.Apps.HeleusApp.Page.Account
 		{
 			AddHeaderRow("Account");
 
+            if(ToolbarItems.Count == 0)
+            {
+                ToolbarItems.Add(new ExtToolbarItem(Tr.Get("Common.Refresh"), null, async () =>
+                {
+                    await WalletApp.UpdateCoreAccountBalance();
+                }));
+            }
+
             var lastBalance = WalletApp.LastBalanceEvent;
 
             _balanceView = new BalanceView();
             AddViewRow(_balanceView);
 
             AddButtonRow("Transfer", Transfer).SetDetailViewIcon(Icons.CreditCardFront);
+            AddButtonRow("RequestRevenue", RequestRevenue).SetDetailViewIcon(Icons.MoneyCheckEdit);
 #if DEBUG
             AddButtonRow("Derived", async (button) =>
             {

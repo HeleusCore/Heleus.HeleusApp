@@ -105,6 +105,36 @@ namespace Heleus.Apps.HeleusApp
         }
     }
 
+
+    public class RequestRevenueSchemeAction : SchemeAction
+    {
+        public const string ActionName = "revenue";
+
+        public readonly int ChainId;
+
+        public override bool IsValid => ChainId > 0;
+
+        public RequestRevenueSchemeAction(SchemeData schemeData) : base(schemeData)
+        {
+            GetInt(StartIndex, out ChainId);
+        }
+
+        public override async Task Run()
+        {
+            if (!IsValid)
+                return;
+
+            var app = UIApp.Current;
+            if (app.CurrentPage != null)
+            {
+                if (app.MainTabbedPage != null)
+                    app.MainTabbedPage.ShowPage(typeof(Page.Account.AccountPage));
+
+                await app.CurrentPage.Navigation.PushAsync(new Page.Account.RequestRevenuePage(ChainId));
+            }
+        }
+    }
+
     public class AuthorizePurchaseSchemeAction : SchemeAction
     {
         public const string ActionName = "authorizepurchase";

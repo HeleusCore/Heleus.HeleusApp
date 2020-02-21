@@ -78,6 +78,11 @@ TransferPage.PasswordStatus: .Common.AccountPasswordStatus
 TransferPage.Submit: .Common.Submit
 TransferPage.Success: The transfer was successfull.
 
+RequestRevenuePage.Title: Request Revenue 
+RequestRevenuePage.Revenue: Revenue
+RequestRevenuePage.Success: You transfered the revenue to your Heleus Core Account.
+RequestRevenuePage.QueryRevenueFailed: No revenue data found.
+RequestRevenuePage.ConfirmRevenue: Do you want to transfer your revenue ({0}) to your Heleus Core Account?
 
 ChainInfoBasePage.Chain: Service Info
 ChainInfoBasePage.ChainId: .Common.ServiceId
@@ -261,6 +266,7 @@ ChainInfoView.Name: Service Name
 ChainInfoView.Website: Service Website
 ChainInfoView.Account: Owner Account ID
 ChainInfoView.Id: Common.ServiceId
+ChainInfoView.Revenue: Daily Revenue
 
 # Transactions
 # 
