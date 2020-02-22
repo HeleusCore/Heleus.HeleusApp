@@ -121,10 +121,6 @@
     <None Include="Resources\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\..\Heleus.AppBase\Misc\libSkiaSharp.so">
-      <Link>libSkiaSharp.so</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="OpenTK.dll.config" />
     <None Include="webkit-sharp.dll.config" />
   </ItemGroup>
@@ -141,11 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Heleus.Base\Heleus.Base.csproj">
-      <Project>{74862847-A7F2-47AE-9BE4-1CC81943DDFE}</Project>
+      <Project>{214C950E-1777-41A3-892B-CAB0DBA8FF89}</Project>
       <Name>Heleus.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Heleus.Services\ProfileServiceBase\Heleus.ProfileServiceBase.csproj">
-      <Project>{D7A3534E-6B06-447C-8455-CC4C02AC1FFF}</Project>
+      <Project>{3EB3E3AD-3B5A-46D6-A033-9BF8BAB7BA29}</Project>
       <Name>Heleus.ProfileServiceBase</Name>
     </ProjectReference>
   </ItemGroup>
@@ -160,4 +156,5 @@
   <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\..\packages\SkiaSharp.1.68.1.1\build\net45\SkiaSharp.targets" Condition="Exists('..\..\packages\SkiaSharp.1.68.1.1\build\net45\SkiaSharp.targets')" />
   <Import Project="..\..\packages\Xamarin.Forms.4.4.0.991640\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.4.4.0.991640\build\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\SkiaSharp.NativeAssets.Linux.1.68.1.1\build\net45\SkiaSharp.NativeAssets.Linux.targets" Condition="Exists('..\..\packages\SkiaSharp.NativeAssets.Linux.1.68.1.1\build\net45\SkiaSharp.NativeAssets.Linux.targets')" />
 </Project>
